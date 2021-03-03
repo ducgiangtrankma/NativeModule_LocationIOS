@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 var location = NativeModules.MyLocationDataManager;
 const _event_ = new NativeEventEmitter(NativeModules.MyLocationDataManager);
+import BackgroundTimer from 'react-native-background-timer';
 console.log('Event', _event_);
 console.log('Location', location);
 export default function App(props) {
@@ -21,6 +22,7 @@ export default function App(props) {
   useEffect(() => {
     check();
   }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <Text>Native module</Text>

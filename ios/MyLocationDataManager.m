@@ -101,7 +101,7 @@ RCT_EXPORT_METHOD(requestPermissions:(NSString *)permissionType
                                   },
                           @"timestamp": @([location.timestamp timeIntervalSince1970] * 1000) // in ms
                         };
-
+    [self ]
     RCTLogInfo(@"significantLocationChange : %@", lastLocationEvent);
     
     // TODO: do something meaningful with our location event. We can do that here, or emit back to React Native
