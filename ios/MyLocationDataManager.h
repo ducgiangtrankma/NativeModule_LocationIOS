@@ -5,14 +5,19 @@
 //  Created by Duc Giang Tran on 3/3/21.
 //
 
-#import <Foundation/Foundation.h>
+//#import <Foundation/Foundation.h>
+//#import <React/RCTBridgeModule.h>
+//NS_ASSUME_NONNULL_BEGIN
+//
+//@interface MyLocationDataManager : NSObject <RCTBridgeModule>
+//@end
+//
+//NS_ASSUME_NONNULL_END
+
 #import <React/RCTBridgeModule.h>
-NS_ASSUME_NONNULL_BEGIN
+#import <React/RCTEventEmitter.h>
 
-@interface MyLocationDataManager : NSObject <RCTBridgeModule>
+@interface MyLocationDataManager : RCTEventEmitter <RCTBridgeModule>
+
 @end
-
-NS_ASSUME_NONNULL_END
-
-
 
