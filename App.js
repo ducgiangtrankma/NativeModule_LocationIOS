@@ -5,10 +5,22 @@ import {
   SafeAreaView,
   StyleSheet,
   NativeModules,
+  EventEmitter,
+  NativeEventEmitter,
 } from 'react-native';
 var location = NativeModules.MyLocationDataManager;
+const _event_ = new NativeEventEmitter(NativeModules.MyLocationDataManager);
+console.log('Event', _event_);
 console.log('Location', location);
 export default function App(props) {
+  const check = async () => {
+    const result = await location.requestPermissions('');
+    console.log('check', result);
+    return result;
+  };
+  useEffect(() => {
+    check();
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
       <Text>Native module</Text>
